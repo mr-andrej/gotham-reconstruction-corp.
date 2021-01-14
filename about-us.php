@@ -49,14 +49,14 @@
                 <div class="col-md-6 col-sm-10 col-xs-20">
                     <div class="aboutus">
                         <h2 class="aboutus-title">About Us</h2><br>
-                        <p class="aboutus-text">Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in.</p>
-                        <p class="aboutus-text">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem</p>
-                       
+                        <h3 class="aboutus-text">Specialized in the reconstruction and renovation of buildings and historical monuments, Gotham Reconstruction Corporation has been the leader in this sector for years. Our skills are recognized by all the superheroes and taxpayers of Gotham-city.
+
+</h3>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="aboutus-banner">
-                        <img src="https://img.wallpapersafari.com/tablet/768/1024/55/97/IfNCUo.jpg" alt="">
+                        <img src="https://www.superherodb.com/pictures2/portraits/10/100/639.jpg?v=1595014950s" alt="">
                     </div>
                 </div>
                 <div class="col-md-5 col-sm-6 col-xs-12">
@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="feature-content">
                                     <h4>Work with heart</h4>
-                                    <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in.</p>
+                                    <p>Our technical teams and our workers are real professionals able to restore the architectures identical to the original. Pssion and love of the good work is our signature.</p>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +79,9 @@
                                 </div>
                                 <div class="feature-content">
                                     <h4>Reliable services</h4>
-                                    <p>Donec vitae sapien ut libero venenatis faucibu. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt</p>
+                                    <p>No worries, what we say we do within the agreed deadlines and strictly respecting the agreements made with our customers.</p>
+
+</p>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +92,9 @@
                                 </div>
                                 <div class="feature-content">
                                     <h4>Great support</h4>
-                                    <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in.</p>
+                                    <p>We support our customers throughout the reconstruction and we are listening in case there should be changes or technical difficulties. 100% satisfaction guaranteed
+
+</p>
                                 </div>
                             </div>
                         </div>

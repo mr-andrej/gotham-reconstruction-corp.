@@ -1,0 +1,46 @@
+.box-img{
+	position: relative;
+	}
+
+.legend-img {
+	position: absolute;
+	bottom: 0;
+	opacity: 0;
+	color :black;
+	font-weight: bold;
+	margin-bottom: 1em;
+	margin-left: 1em;
+	
+		-webkit-transform:rotate(20deg);
+		-moz-transform:rotate(20deg);
+		-o-transform:rotate(20deg);
+		filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1.1); 
+		-ms-transform:rotate(20deg);  
+	transform:  rotate(20deg);      
+	}
+
+/* graphique */
+
+.box-img .legend-img {
+	opacity:1;
+	}
+
+#container-graph{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.div-graph{
+	width: auto;
+	height: 500px;
+}
+
+.anychart-credits{
+	display: none;
+}
+
+
+
+
