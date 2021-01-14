@@ -9,7 +9,7 @@ $arrContextOptions = array( // Skip certification verification
     ),
 );
 
-/* NAME */
+/* NAME $name */
 $nameJson = file_get_contents($url, false, stream_context_create($arrContextOptions)); //Get JSON from url
 $nameTemp = json_decode($nameJson, true); // Converts the JSON to an array ("ip" -> '127.0.0.1')
 $name = $nameTemp["name"]; // Take the value at "ip" in the array and put it in a string variable
@@ -39,9 +39,10 @@ $connecJson = file_get_contents($url, false, stream_context_create($arrContextOp
 $connecTemp = json_decode($connecJson, true); // Converts the JSON to an array ("ip" -> '127.0.0.1')
 $connec = $connecTemp["connections"]; // Take the value at "ip" in the array and put it in a string variable
 
-/* IMG */
+/* IMG $image */
 $imgJson = file_get_contents($url, false, stream_context_create($arrContextOptions)); //Get JSON from url
 $imgTemp = json_decode($imgJson, true); // Converts the JSON to an array ("ip" -> '127.0.0.1')
 $img = $imgTemp["image"]; // Take the value at "ip" in the array and put it in a string variable
+
 ?>
 
