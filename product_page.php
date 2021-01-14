@@ -80,66 +80,7 @@ require "call_api.php"
 }
 </style>
 
-<!-- /* NAME */ -->
-<h1><?php echo($name);?></h1>
-
-<!-- /* STAT */ -->
-<p><?php foreach($powerstats as $key => $valeur){
-         echo $key. ' : ' .$valeur. '<br>';
-         };?></p>
-
-<!-- /* BIO */ -->
-<p><?php foreach($bio as $key => $valeur){
-             if (is_array($valeur)){
-                foreach($valeur as $key2 => $valeur2){
-                    echo $key . ' : ' . $valeur2 . '<br>';
-                    }
-                }
-                else {
-                    echo $key . ' : ' . $valeur . '<br>';
-                }
-            };         
-?></p>
-
-<!-- /* APPEAR */ -->
-<p><?php foreach($appear as $key => $valeur){
-             if (is_array($valeur)){
-                 foreach($valeur as $key2 => $valeur2){
-                    echo $key . ' : ' . $valeur2 . '<br>';
-                    }
-                }
-                else {
-                    echo $key . ' : ' . $valeur . '<br>';
-                }
-            };         
-?></p>
-
-<!-- /* WORK */ -->
-<p><?php foreach($work as $key => $valeur){
-         echo $key. ' : ' .$valeur. '<br>';
-         };?></p>
-
-<!-- /* CONNEC */ -->
-<p><?php foreach($connec as $key => $valeur){
-             if (is_array($valeur)){
-                foreach($valeur as $key2 => $valeur2){
-                    echo $key . ' : ' . $valeur2 . '<br>';
-                    }
-                }
-                else {
-                    echo $key . ' : ' . $valeur . '<br>';
-                }
-            };         
-?></p>
-
-<!-- /* IMG */ -->
-<p><?php foreach($img as $key => $image){
-         echo '<img src="' . $image . '">';
-         };
-         ?></p>
-
-
-<!-- /* Signature */ -->
+<!-- /* Random Signature */ -->
 
 <?php
 $polices = array('PWSignaturetwo', 'FreeSignature', 'MaestroSignature', 'PhilipSignature', 'SanteriaSignature', 'SebastianSignature');
@@ -148,20 +89,6 @@ $rand = rand(0, 5);
 $police = $polices[$rand];
 ?>
 
-<h1 style="font-family: <?php echo $police; ?>"><?php echo($name);?></h1>
-
-
-
-
-<div class="card" style="width: 18rem;">
-
-  <div class="card-body" style="background-image:url('<?php echo $image;?>')">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-
     <!-- Blog section -->
     <section class="blog-section spad">
         <div class="container">
@@ -169,45 +96,34 @@ $police = $polices[$rand];
 
                 <div class="col-lg-5">
                     <div class="featured-item box-img">
-                        <img src="<?php echo $image;?>" alt="">
+                        <?php echo imgArray($img);?>
                         <h1 class="legend-img" style="font-family: <?php echo $police; ?>"><?php echo($name);?></h1>
                         <a href="#" class="site-btn">Buy it !</a>
                     </div>
                 </div>
 
                 <div class="col-lg-7">
-                    <h4 class="bgs-title">from the blog</h4>
+                    <h4 class="bgs-title">Price : $$$</h4>
+
                     <div class="blog-item">
                         <div class="bi-thumb" >
-                            <img src="images/blog-thumb/1.jpg" alt="">
-                            
+                            <img src="images/boom/WOW-PNG-Image-File.png" alt="">                            
                         </div>
                         <div class="bi-content">
-                            <h5>10 tips to dress like a queen</h5>
-                            <div class="bi-meta">July 02, 2018 | By maria deloreen</div>
-                            <a href="#" class="readmore">Read More</a>
+                            <h5>Biography</h5>
+                            <p><?php echo bioArray($bio); ?><p>
                         </div>
                     </div>
                     <div class="blog-item">
                         <div class="bi-thumb">
-                            <img src="images/blog-thumb/2.jpg" alt="">
+                            <img src="images/boom/98-981587_comic-png-transparent-comic-png.png" alt="">
                         </div>
                         <div class="bi-content">
-                            <h5>Fashion Outlet products</h5>
-                            <div class="bi-meta">July 02, 2018 | By Jessica Smith</div>
-                            <a href="#" class="readmore">Read More</a>
+                            <h5>Appearance</h5>
+                            <p><?php echo appearArray($appear); ?><p>                            
                         </div>
                     </div>
-                    <div class="blog-item">
-                        <div class="bi-thumb">
-                            <img src="images/blog-thumb/3.jpg" alt="">
-                        </div>
-                        <div class="bi-content">
-                            <h5>the little black dress just for you</h5>
-                            <div class="bi-meta">July 02, 2018 | By maria deloreen</div>
-                            <a href="#" class="readmore">Read More</a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -219,45 +135,33 @@ $police = $polices[$rand];
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-5 div-graph">
+                <div class="col-lg-5 div-graph mb-5">
                     <div class="featured-item box-img" id="container-graph">
                     <div ></div>   
                     </div>
                 </div>
 
-                <div class="col-lg-7">
-                    <h4 class="bgs-title">from the blog</h4>
+                <div class="col-lg-7">                
                     <div class="blog-item">
                         <div class="bi-thumb" >
-                            <img src="images/blog-thumb/1.jpg" alt="">
+                        <img src="images/boom/WOW-PNG-Image-File.png" alt="">    
                             
                         </div>
                         <div class="bi-content">
-                            <h5>10 tips to dress like a queen</h5>
-                            <div class="bi-meta">July 02, 2018 | By maria deloreen</div>
-                            <a href="#" class="readmore">Read More</a>
+                            <h5>Work</h5>
+                            <p><?php echo workArray($work); ?><p>  
                         </div>
                     </div>
                     <div class="blog-item">
                         <div class="bi-thumb">
-                            <img src="images/blog-thumb/2.jpg" alt="">
+                        <img src="images/boom/98-981587_comic-png-transparent-comic-png.png" alt="">
                         </div>
                         <div class="bi-content">
-                            <h5>Fashion Outlet products</h5>
-                            <div class="bi-meta">July 02, 2018 | By Jessica Smith</div>
-                            <a href="#" class="readmore">Read More</a>
+                            <h5>Connections</h5>
+                            <p><?php echo workArray($connec); ?><p> 
                         </div>
                     </div>
-                    <div class="blog-item">
-                        <div class="bi-thumb">
-                            <img src="images/blog-thumb/3.jpg" alt="">
-                        </div>
-                        <div class="bi-content">
-                            <h5>the little black dress just for you</h5>
-                            <div class="bi-meta">July 02, 2018 | By maria deloreen</div>
-                            <a href="#" class="readmore">Read More</a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
