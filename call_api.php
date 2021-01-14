@@ -119,6 +119,19 @@ function imgArray($img)
         }  
 
 
+/* PUBLISHER */
+
+function publisher($bio)
+{
+    foreach ($bio as $key => $valeur) 
+    {
+        if ($key === "publisher") 
+        { 
+            echo $valeur ;
+        }
+    } 
+}
+
 ?>
 
 
