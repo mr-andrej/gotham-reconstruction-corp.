@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>Les Supers - Gotham Reconstruction Corporation</title>
+    <title>Recherche - Gotham Reconstruction Corporation</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -99,17 +99,20 @@
                 if ($_SERVER['REQUEST_METHOD'] === 'GET' && $_GET != null) {
                     if (strtolower(trim($_GET["search"])) == "i want everyone")
                         $superHeros = getSupersByName("a");
+                    else if ($_GET['universe'] != null)
+                        $superHeros = getSupersByName("a");
                     else
                         $superHeros = getSupersByName($_GET["search"]);
 
-                    if (!($superHeros["response"] === "error")) {
+                    if (!($superHeros["response"] === "error") && $_GET['universe'] == null) {
                     foreach ($superHeros['results'] as $superHero) {
                         echo '<div class="mix col-lg-3 col-md-6 best">';
                         echo '<div class="product-item">';
+                        echo '<a href="product_page.php?id=' . $superHero['id'] . '">';
                         echo '<figure>';
                         echo '<img src="' . $superHero['image']['url'] . '" alt="">';
                         echo '<div class="bache">' . $superHero['biography']['publisher'] . '</div>';
-                        echo '</figure>';
+                        echo '</figure></a>';
 
                         echo '<div class="product-info">';
                         echo '<h6>' . $superHero['name'] . '</h6>';
@@ -119,6 +122,46 @@
                         echo '</div>';
                         echo '</div>';
                     }
+                    } elseif (!($superHeros["response"] === "error") && $_GET['universe'] == "MARVEL") {
+                        foreach ($superHeros['results'] as $superHero) {
+                            if ($superHero['biography']['publisher'] == "Marvel Comics") {
+                            echo '<div class="mix col-lg-3 col-md-6 best">';
+                            echo '<div class="product-item">';
+                            echo '<a href="product_page.php?id=' . $superHero['id'] . '">';
+                            echo '<figure>';
+                            echo '<img src="' . $superHero['image']['url'] . '" alt="">';
+                            echo '<div class="bache">' . $superHero['biography']['publisher'] . '</div>';
+                            echo '</figure></a>';
+
+                            echo '<div class="product-info">';
+                            echo '<h6>' . $superHero['name'] . '</h6>';
+                            echo '<p>$' . getPrice($superHero['powerstats']) . '.00</p>';
+                            echo '<a href="#" class="site-btn btn-line">AJOUTER AU PANIER</a>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                            }
+                        }
+                    }  elseif (!($superHeros["response"] === "error") && $_GET['universe'] == "DC") {
+                        foreach ($superHeros['results'] as $superHero) {
+                            if ($superHero['biography']['publisher'] == "DC Comics") {
+                            echo '<div class="mix col-lg-3 col-md-6 best">';
+                            echo '<div class="product-item">';
+                            echo '<a href="product_page.php?id=' . $superHero['id'] . '">';
+                            echo '<figure>';
+                            echo '<img src="' . $superHero['image']['url'] . '" alt="">';
+                            echo '<div class="bache">' . $superHero['biography']['publisher'] . '</div>';
+                            echo '</figure></a>';
+
+                            echo '<div class="product-info">';
+                            echo '<h6>' . $superHero['name'] . '</h6>';
+                            echo '<p>$' . getPrice($superHero['powerstats']) . '.00</p>';
+                            echo '<a href="#" class="site-btn btn-line">AJOUTER AU PANIER</a>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                            }
+                        }
                     } else {
                         echo "<h3 style='text-align:center; margin-left: 200px'>" . "Pas de super avec ce nom dans notre base de données" . "</h3><br><br><br><br><br><br><br><br>";
                     }

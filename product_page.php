@@ -7,7 +7,6 @@ require "getSuper.php";
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <title>Product Page</title>
   <link rel="stylesheet" href="css/product_page.css">
     <!-- basic -->
     <meta charset="utf-8">
@@ -17,7 +16,6 @@ require "getSuper.php";
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>Eflyer</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -28,7 +26,7 @@ require "getSuper.php";
     <!-- Responsive-->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- fevicon -->
-    <link rel="icon" href="images/fevicon.png" type="image/gif"/>
+    <link rel="icon" href="images/favicon.png" type="image/gif"/>
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
     <!-- Tweaks for older IEs-->
@@ -46,6 +44,7 @@ require "getSuper.php";
     <link rel="stylesoeet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
           media="screen">
+    <title>Portofolio - Gotham Reconstruction Corporation</title>
 </head>
 <body>
 <style>
@@ -107,51 +106,50 @@ $police = $polices[$rand];
     <!-- header section start -->
     <div class="header_section">
         <div class="container">
-            <div class="containt_main">    
-              
-                           
+            <div class="containt_main">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="index.php">Les Supers</a>
+                    <a href="#">À Propos</a>
+                    <a href="#">Contact</a>
+                </div>
+                <span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></span>
+                <div class="main">
+                    <!-- Another variation with a button -->
+                    <?php include "_search-bar.php"; ?>
+                </div>
+                <div class="header_box">
+                    <div class="login_menu">
+                        <ul>
+                            <li><a href="#">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <span class="padding_10">Cart</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <br><br><br><br>
             </div>
         </div>
     </div>
     <!-- header section end -->
 
-    <!-- Featured section -->
-    <div class="featured-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="featured-item">
-                        <img src="images/marvel_logo.jpg" alt="">
-                        <a href="#" class="site-btn">see more</a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="featured-item mb-0">
-                        <img src="images/DC_logo.jpg" alt="">
-                        <a href="#" class="site-btn">see more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Featured section end -->
-
     <!-- Blog section -->
     <section class="blog-section spad" style="background:white !important;">
         <div class="container">
             <div class="row">
-
+                <?php if ($_SERVER['REQUEST_METHOD'] === 'GET' && $_GET != null) : ?>
+                <?php $superHero = getSuperById($_GET["id"]); ?>
                 <div class="col-lg-5">
                     <div class="featured-item box-img">
-                        <?php echo imgArray($img);?>
-                        <h1 class="legend-img" style="font-family: <?php echo $police; ?>"><?php echo($name);?></h1>
-                        <a href="#" class="site-btn">Buy it !</a>
+                        <?php echo '<img src="' . $superHero['image']['url'] . '">';?>
+                        <h1 class="legend-img" style="font-family: <?php echo $police; ?>"><?php echo $superHero['name']?></h1>
+                        <a href="#" class="site-btn" style="left: 30%">AJOUTER AU PANIER</a>
                     </div>
                 </div>
 
                 <div class="col-lg-7">
-                    <h4 class="bgs-title">Price : <?php echo($indice);?> $ </h4>
-
+                    <h4 class="bgs-title">Prix : $<?php echo getPrice($superHero['powerstats']) . '.00';?> </h4>
 
                     <div class="blog-item">
                         <div class="bi-thumb" >
@@ -159,7 +157,19 @@ $police = $polices[$rand];
                         </div>
                         <div class="bi-content">
                             <h5>Biography</h5>
-                            <p><?php echo bioArray($bio); ?><p>
+                            <p><?php
+                            foreach($superHero['biography'] as $key => $valeur)
+                            {
+                                if (is_array($valeur))
+                                {
+                                    foreach($valeur as $key2 => $valeur2)
+                                    {
+                                        echo '<i>' . ucfirst($key) . '</i> : ' . $valeur2 . '<br>';
+                                    }
+                                } else {
+                                    echo '<i>' . ucfirst($key) . '</i> : ' . $valeur . '<br>';
+                                }
+                            };   ?><p>
                         </div>
                     </div>
                     <div class="blog-item">
@@ -168,7 +178,21 @@ $police = $polices[$rand];
                         </div>
                         <div class="bi-content">
                             <h5>Appearance</h5>
-                            <p><?php echo appearArray($appear); ?><p>                            
+                            <p><?php
+                            foreach ($superHero["appearance"] as $key => $valeur)
+                            {
+                                if (is_array($valeur))
+                                {
+                                    foreach ($valeur as $key2 => $valeur2)
+                                    {
+                                        echo '<i>' . ucfirst($key) . '</i> : ' . $valeur2 . '<br>';
+                                    }
+                                } else {
+                                    echo '<i>' . ucfirst($key) . '</i> : ' . $valeur . '<br>';
+                                }
+                            };
+
+                            ?><p>
                         </div>
                     </div>
                     
@@ -197,7 +221,12 @@ $police = $polices[$rand];
                         </div>
                         <div class="bi-content">
                             <h5>Work</h5>
-                            <p><?php echo workArray($work); ?><p>  
+                            <p><?php
+                            foreach($superHero['work'] as $key => $valeur)
+                            {
+                                echo '<i>' . ucfirst($key) . '</i> : ' . $valeur . '<br>';
+                            };
+                            ?><p>
                         </div>
                     </div>
                     <div class="blog-item">
@@ -206,14 +235,20 @@ $police = $polices[$rand];
                         </div>
                         <div class="bi-content">
                             <h5>Connections</h5>
-                            <p><?php echo workArray($connec); ?><p> 
+                            <p><?php
+                            foreach($superHero['connections'] as $key => $valeur)
+                            {
+                                echo '<i>' . ucfirst($key) . '</i> : ' . $valeur . '<br>';
+                            };
+                            ?><p>
                         </div>
                     </div>
                     
                 </div>
             </div>
         </div>
-    </section>
+         <?php endif; ?>
+     </section>
     <!-- Blog section end -->
     <?php include "_footer.php"; ?>
 </div>
@@ -226,7 +261,7 @@ $police = $polices[$rand];
 <script>
     anychart.onDocumentReady(function () {
 
-      var data = [<?php foreach($powerstats as $key => $valeur){
+      var data = [<?php foreach($superHero['powerstats'] as $key => $valeur){
          echo '{x: "'.ucfirst($key).'", value: '.$valeur.'},';
          }; ?>
       ];
@@ -243,7 +278,7 @@ $police = $polices[$rand];
       chart.line(data)
 
       // set chart title
-      chart.title("<?php echo $name ?> Power Stat");
+      chart.title("<?php echo $superHero['name'];?> Power Stats");
 
       // set container id for the chart
       chart.container('container-graph');
