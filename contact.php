@@ -68,22 +68,6 @@
         </div>
 
        <div class="form-group">
-         <label for="">Username : </label>
-        <input type="text"
-               class="form-control"
-               name="login"
-               id="login" required/>
-       </div>
-
-       <div class="form-group">
-         <label for="">Password : </label>
-        <input type="password"
-               class="form-control"
-               name="password"
-               id="password" required/>
-       </div>
-
-       <div class="form-group">
          <label for="">E-mail : </label>
         <input type="email"
                class="form-control"
@@ -92,36 +76,10 @@
        </div>
 
        <div class="form-group">
-         <label for="">Number : </label>
-        <input type="number"
-               class="form-control"
-               name="number"
-               id="number" required/>
+         <label for="">Message : </label>
+        <textarea />
        </div>
 
-       <div class="form-group">
-         <label for="">Street Name : </label>
-        <input type="text"
-             class="form-control"
-             name="address"
-             id="address" required/>
-       </div>
-
-       <div class="form-group">
-         <label for="">Zip Code : </label>
-        <input type="text"
-             class="form-control"
-             name="postal"
-             id="postal" required/>
-       </div>
-
-       <div class="form-group">
-         <label for="">City : </label>
-        <input type="text"
-             class="form-control"
-             name="city"
-             id="city" required/>
-       </div>
 
        <input type="submit" class="btn-submit btn" value="Send"/>
     </form>

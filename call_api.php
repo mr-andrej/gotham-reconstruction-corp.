@@ -1,7 +1,7 @@
 <?php
 /* Part 1: Get the user's IP */
 
-$url = "https://superheroapi.com/api.php/2762190224046152/28"; // URL containing our API call
+$url = "https://www.superheroapi.com/api/2762190224046152/" . $i; // URL containing our API call
 $arrContextOptions = array( // Skip certification verification
     "ssl" => array(
         "verify_peer" => false,
@@ -15,9 +15,9 @@ $nameTemp = json_decode($nameJson, true); // Converts the JSON to an array ("ip"
 $name = $nameTemp["name"]; // Take the value at "ip" in the array and put it in a string variable
 
 function name($name)
-{
-    echo($name);
-}
+        {
+            echo($name);
+        }
 
 
 /* STAT */
@@ -26,10 +26,10 @@ $powerstatsTemp = json_decode($powerstatsJson, true); // Converts the JSON to an
 $powerstats = $powerstatsTemp["powerstats"]; // Take the value at "ip" in the array and put it in a string variable
 
 function powerArray($powerstats){
-    foreach($powerstats as $key => $valeur){
-        echo $key. ' : ' .$valeur. '<br>';
-        };
-}
+            foreach($powerstats as $key => $valeur){
+                echo $key. ' : ' .$valeur. '<br>';
+                };
+        }
 
 
 
@@ -61,20 +61,20 @@ $appearTemp = json_decode($appearJson, true); // Converts the JSON to an array (
 $appear = $appearTemp["appearance"]; // Take the value at "ip" in the array and put it in a string variable
 
 function appearArray($appear)
-{
-    foreach ($appear as $key => $valeur) 
-    {
-        if (is_array($valeur)) 
         {
-            foreach ($valeur as $key2 => $valeur2) 
+            foreach ($appear as $key => $valeur)
             {
-                echo '<i>' . ucfirst($key) . '</i> : ' . $valeur2 . '<br>';
-            }
-        } else {
-            echo '<i>' . ucfirst($key) . '</i> : ' . $valeur . '<br>';
+                if (is_array($valeur))
+                {
+                    foreach ($valeur as $key2 => $valeur2)
+                    {
+                        echo '<i>' . ucfirst($key) . '</i> : ' . $valeur2 . '<br>';
+                    }
+                } else {
+                    echo '<i>' . ucfirst($key) . '</i> : ' . $valeur . '<br>';
+                }
+            };
         }
-    };
-}  
 
 
 /* WORK */
@@ -83,12 +83,12 @@ $workTemp = json_decode($workJson, true); // Converts the JSON to an array ("ip"
 $work = $workTemp["work"]; // Take the value at "ip" in the array and put it in a string variable
 
 function workArray($work)
-{
-    foreach($work as $key => $valeur)
-    {
-        echo '<i>' . ucfirst($key) . '</i> : ' . $valeur . '<br>';
-    };
-}
+        {
+            foreach($work as $key => $valeur)
+            {
+                echo '<i>' . ucfirst($key) . '</i> : ' . $valeur . '<br>';
+            };
+        }
 
 
 /* CONNEC */
@@ -97,12 +97,12 @@ $connecTemp = json_decode($connecJson, true); // Converts the JSON to an array (
 $connec = $connecTemp["connections"]; // Take the value at "ip" in the array and put it in a string variable
 
 function connecArray($connec)
-{
-    foreach($connec as $key => $valeur){
-           
-           echo '<i>' . ucfirst($key) . '</i> : ' . $valeur . '<br>';
-                };
-            }
+        {
+            foreach($connec as $key => $valeur){
+
+                   echo '<i>' . ucfirst($key) . '</i> : ' . $valeur . '<br>';
+                        };
+                    }
 
 
 /* IMG $image */
@@ -122,15 +122,32 @@ function imgArray($img)
 /* PUBLISHER */
 
 function publisher($bio)
-{
-    foreach ($bio as $key => $valeur) 
-    {
-        if ($key === "publisher") 
-        { 
-            echo $valeur ;
+        {
+            foreach ($bio as $key => $valeur)
+            {
+                if ($key === "publisher")
+                {
+                    echo $valeur ;
+                }
+            }
         }
-    } 
-}
+
+/* PRICE A LA MOYENNE */
+
+$indice = (int) (array_sum($powerstats)/6);
+
+function indice($indice)
+        {
+            switch ($indice) {
+
+                case 0<$indice && $indice<20:
+                    echo "20.00$";
+                    break;
+                default:
+                    echo $indice . ".00$";
+                    break;
+            }
+        }
 
 ?>
 

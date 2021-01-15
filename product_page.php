@@ -103,7 +103,7 @@ $police = $polices[$rand];
                 </div>
 
                 <div class="col-lg-7">
-                    <h4 class="bgs-title">Price : $$$</h4>
+                    <h4 class="bgs-title">Price : <?php echo($indice);?> $ </h4>
 
                     <div class="blog-item">
                         <div class="bi-thumb" >
