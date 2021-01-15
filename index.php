@@ -94,13 +94,13 @@
                 <div class="col-md-6">
                     <div class="featured-item">
                         <img src="images/marvel_logo.jpg" alt="">
-                        <a href="#" class="site-btn">see more</a>
+                        <a href="search.php?universe=MARVEL" class="site-btn">see more</a>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="featured-item mb-0">
                         <img src="images/DC_logo.jpg" alt="">
-                        <a href="#" class="site-btn">see more</a>
+                        <a href="search.php?universe=DC" class="site-btn">see more</a>
                     </div>
                 </div>
             </div>
@@ -118,10 +118,11 @@
 
                     echo '<div class="mix col-lg-3 col-md-6 best">';
                     echo '<div class="product-item">';
+                    echo '<a href="product_page.php?id=' . $superHero['id'] . '">';
                     echo '<figure>';
                     echo '<img src="' . $superHero['image']['url'] . '" alt="">';
                     echo '<div class="bache">' . $superHero['biography']['publisher'] . '</div>';
-                    echo '</figure>';
+                    echo '</figure></a>';
 
                     echo '<div class="product-info">';
                     echo '<h6>' . $superHero['name'] . '</h6>';
