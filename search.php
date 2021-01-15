@@ -42,7 +42,7 @@
 </head>
 <body>
 <!-- banner bg main start -->
-<div class="banner_bg_main">
+<div class="banner_bg_main" style="height: 40vh;">
     <!-- header top section start -->
     <?php include "_header.php"; ?>
     <!-- header top section start -->
@@ -63,23 +63,14 @@
             <div class="containt_main">
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="index.php">Home</a>
-                    <a href="fashion.html">Fashion</a>
-                    <a href="electronic.html">Electronic</a>
-                    <a href="jewellery.html">Jewellery</a>
+                    <a href="index.php">Les Supers</a>
+                    <a href="#">À Propos</a>
+                    <a href="#">Contact</a>
                 </div>
                 <span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></span>
                 <div class="main">
                     <!-- Another variation with a button -->
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search this blog">
-                        <div class="input-group-append">
-                            <button class="btn btn-secondary" type="button"
-                                    style="background-color: black; border-color: black; ">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
+                    <?php include "_search-bar.php"; ?>
                 </div>
                 <div class="header_box">
                     <div class="login_menu">
@@ -97,24 +88,7 @@
     <!-- header section end -->
 
     <!-- Featured section -->
-    <div class="featured-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="featured-item">
-                        <img src="images/marvel_logo.jpg" alt="">
-                        <a href="#" class="site-btn">see more</a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="featured-item mb-0">
-                        <img src="images/DC_logo.jpg" alt="">
-                        <a href="#" class="site-btn">see more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- Featured section end -->
 
     <!-- Product section -->
@@ -122,64 +96,31 @@
         <div class="container">
             <div class="row" id="product-filter">
                 <?php
-                for ($i = 75; $i <= 82; $i++) {
-                    $superHero = getSuper($i);
+                if ($_SERVER['REQUEST_METHOD'] === 'GET' && $_GET != null) {
+                    $superHeros = getSupersByName($_GET["search"]);
 
-                 echo '<div class="mix col-lg-3 col-md-6 best">';
-                 echo '<div class="product-item">';
-                 echo '<figure>';
-                 echo '<img src="' . $superHero['image']['url'] . '" alt="">';
-                 echo '<div class="bache">' . $superHero['biography']['publisher'] . '</div>';
-                 echo '</figure>';
+                    foreach ($superHeros['results'] as $superHero) {
+                        echo '<div class="mix col-lg-3 col-md-6 best">';
+                        echo '<div class="product-item">';
+                        echo '<figure>';
+                        echo '<img src="' . $superHero['image']['url'] . '" alt="">';
+                        echo '<div class="bache">' . $superHero['biography']['publisher'] . '</div>';
+                        echo '</figure>';
 
-                 echo '<div class="product-info">';
-                 echo '<h6>' . $superHero['name'] . '</h6>';
-                 echo '<p>$' . getPrice($superHero['powerstats']). '.00</p>';
-                 echo '<a href="#" class="site-btn btn-line">AJOUTER AU PANIER</a>';
-                 echo '</div>';
-                 echo '</div>';
-                 echo '</div>';
+                        echo '<div class="product-info">';
+                        echo '<h6>' . $superHero['name'] . '</h6>';
+                        echo '<p>$' . getPrice($superHero['powerstats']) . '.00</p>';
+                        echo '<a href="#" class="site-btn btn-line">AJOUTER AU PANIER</a>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+                    }
                 }
                 ?>
             </div>
         </div>
     </section>
     <!-- Product section end -->
-
-
-    <!-- Blog section -->
-    <section class="blog-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="featured-item">
-                        <!-- 16:9 aspect ratio -->
-
-                        <video src="https://i.imgur.com/coxxJKP.mp4" width="454" controls="" style="margin-bottom: -8px;"> No video support in this browser.</video>
-
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <h4 class="bgs-title">Superman</h4>
-                    <div class="blog-item">
-                        <p>Superman est un super-héros de bande dessinée américaine appartenant au monde imaginaire de l’Univers DC.
-                            Ce personnage est considéré comme une icône culturelle américaine.</p>
-                        <p>Superman a popularisé l'archétype de super-héros et défini ses conventions, bien qu'il ne soit pas le premier
-                            personnage de super-héros. Les super-héros sont généralement jugés en fonction de leur ressemblance avec la norme établie par Superman.
-                            Il reste le super-héros de bandes dessinées le plus vendu de tous les temps ; et sa franchise est une des plus lucratives même en dehors des bandes dessinées</p>
-                        <p>
-                            Ses parents adoptifs Jonathan et Martha Kent apparaissent pour la première fois dans le premier numéro de Action Comics, créé par Jerry Siegel et Joe Shuster.
-                            C'est Martha Kent qui conçoit le costume de Superman. Ses parents sont présents dans de nombreux comics de Superman. Ils apparaissent également dans de nombreuses adaptations cinématographiques et télévisées.
-                        </p>
-                        <p>Kal-El a une cousine Kara Zor-El, alias Supergirl qui est également envoyée sur Terre.
-                            Alors que Clark Kent est adulte, un autre enfant kryptonien arrive de la même manière, Superman l'adopte et le prénomme Chris Kent.</p>
-                        <p>Kal-El cotoie régulierement les autres membres de la Justice League, en particulier avec Batman qui en dépit de conflits parfois très violents devient l'un de ses meilleurs alliés et amis.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Blog section end -->
 
 
     <?php include "_footer.php"; ?>
