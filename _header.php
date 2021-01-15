@@ -5,8 +5,8 @@
                 <div class="custom_menu">
                     <ul>
                         <li><a href="index.php">Les Supers</a></li>
-                        <li><a href="#">À Propos</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="about-us.php">À Propos</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </div>
             </div>
