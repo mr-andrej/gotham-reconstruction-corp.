@@ -97,8 +97,12 @@
             <div class="row" id="product-filter">
                 <?php
                 if ($_SERVER['REQUEST_METHOD'] === 'GET' && $_GET != null) {
-                    $superHeros = getSupersByName($_GET["search"]);
+                    if (strtolower(trim($_GET["search"])) == "i want everyone")
+                        $superHeros = getSupersByName("a");
+                    else
+                        $superHeros = getSupersByName($_GET["search"]);
 
+                    if (!($superHeros["response"] === "error")) {
                     foreach ($superHeros['results'] as $superHero) {
                         echo '<div class="mix col-lg-3 col-md-6 best">';
                         echo '<div class="product-item">';
@@ -114,6 +118,9 @@
                         echo '</div>';
                         echo '</div>';
                         echo '</div>';
+                    }
+                    } else {
+                        echo "<h3 style='text-align:center; margin-left: 200px'>" . "Pas de super avec ce nom dans notre base de données" . "</h3><br><br><br><br><br><br><br><br>";
                     }
                 }
                 ?>
