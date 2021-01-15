@@ -829,7 +829,7 @@ a:hover {
     z-index: 1;
     min-width: 162px;
     padding: 23px 30px;
-    left: calc(35% + 0.5vh);
+    left: calc(36%);
     bottom: -30px;
     text-transform: uppercase;
     background: #b09d81;
@@ -2064,6 +2064,16 @@ a:hover {
         top: 80px;
         position: relative;
     }
+    .featured-item .site-btn {
+        position: absolute;
+        z-index: 1;
+        min-width: 162px;
+        padding: 23px 30px;
+        left: calc(32%);
+        bottom: -30px;
+        text-transform: uppercase;
+        background: #b09d81;
+    }
 
     .hs-item .hs-content h2 {
         font-size: 60px;
@@ -2088,6 +2098,17 @@ a:hover {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .header-section {
         padding: 30px 15px 0;
+    }
+
+    .featured-item .site-btn {
+        position: absolute;
+        z-index: 1;
+        min-width: 162px;
+        padding: 23px 30px;
+        left: calc(25%);
+        bottom: -30px;
+        text-transform: uppercase;
+        background: #b09d81;
     }
 
     .header-section.header-normal {
@@ -2233,6 +2254,9 @@ a:hover {
 
     .featured-item {
         margin-bottom: 80px;
+    }
+    .featured-item video{
+        width: 454px;
     }
 
     .product-filter li {
