@@ -161,7 +161,7 @@ $police = $polices[$rand];
                         </figure>
                         <div class="product-info">
                             <h6><?php echo name($name);?></h6>
-                            <p>$19.50</p>
+                            <p>$<?php echo ($indice);?></p>
                             <a href="#" class="site-btn btn-line">ADD TO CART</a>
                         </div>
                     </div>

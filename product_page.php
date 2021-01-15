@@ -150,8 +150,8 @@ $police = $polices[$rand];
                 </div>
 
                 <div class="col-lg-7">
-                    <h3 class="bgs-title mb-3"><?php echo($name);?></h3>
-                    <h4 class="bgs-title"><?php echo "$" . getPrice($powerstats) . ".00";?></h4>
+                    <h4 class="bgs-title">Price : <?php echo($indice);?> $ </h4>
+
 
                     <div class="blog-item">
                         <div class="bi-thumb" >
