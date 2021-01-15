@@ -147,7 +147,7 @@
                     <div class="featured-item">
                         <!-- 16:9 aspect ratio -->
 
-                        <video src="https://i.imgur.com/coxxJKP.mp4" width="454" controls=""
+                        <video src="https://i.imgur.com/coxxJKP.mp4" width="100%" controls=""
                                style="margin-bottom: -8px;"> No video support in this browser.
                         </video>
 
