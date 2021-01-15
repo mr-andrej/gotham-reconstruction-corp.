@@ -42,7 +42,56 @@
 
 <body>
 
-<div class="row">
+<div class="banner_bg_main">
+        <!-- header top section start -->
+        <?php include "_header.php"; ?>
+        <!-- header top section start -->
+        <!-- logo section start -->
+        <div class="logo_section" style="padding-top: 50px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="logo"><a href="index.php"><img src="images/logo.png"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- logo section end -->
+        <!-- header section start -->
+        <div class="header_section">
+            <div class="container">
+                <div class="containt_main">    
+                
+                            
+                </div>
+            </div>
+        </div>
+        <!-- header section end -->
+
+        <!-- Featured section -->
+        <div class="featured-section spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="featured-item">
+                            <img src="images/marvel_logo.jpg" alt="">
+                            <a href="#" class="site-btn">see more</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="featured-item mb-0">
+                            <img src="images/DC_logo.jpg" alt="">
+                            <a href="#" class="site-btn">see more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured section end -->
+
+<div class="row mt-5 mb-5">
 
 <div class="form-event col-4 offset-4">
 
@@ -127,4 +176,6 @@
     </form>
 </div>
 </div>
+
+<?php include "_footer.php"; ?>
 </body>

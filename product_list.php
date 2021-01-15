@@ -89,14 +89,55 @@ $rand = rand(0, 5);
 $police = $polices[$rand];
 ?>
 
-<!-- Product section -->
-<section class="product-section spad">
+<div class="banner_bg_main">
+    <!-- header top section start -->
+    <?php include "_header.php"; ?>
+    <!-- header top section start -->
+    <!-- logo section start -->
+    <div class="logo_section" style="padding-top: 50px;">
         <div class="container">
-            <ul class="product-filter controls">
-                <li class="control" data-filter=".new">New arrivals</li>
-                <li class="control" data-filter="all">Recommended</li>
-                <li class="control" data-filter=".best">Best sellers</li>
-            </ul>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="logo"><a href="index.php"><img src="images/logo.png"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- logo section end -->
+    <!-- header section start -->
+    <div class="header_section">
+        <div class="container">
+            <div class="containt_main">                  
+                           
+            </div>
+        </div>
+    </div>
+    <!-- header section end -->
+
+    <!-- Featured section -->
+    <div class="featured-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="featured-item">
+                        <img src="images/marvel_logo.jpg" alt="">
+                        <a href="#" class="site-btn">see more</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="featured-item mb-0">
+                        <img src="images/DC_logo.jpg" alt="">
+                        <a href="#" class="site-btn">see more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Featured section end -->
+
+<!-- Product section -->
+<section class="product-section spad pt-0 mt-3">
+        <div class="container">
 
             <div class="row" id="product-filter">
                
@@ -131,7 +172,8 @@ $police = $polices[$rand];
         </div>
     </section>
     <!-- Product section end -->
-
+    <?php include "_footer.php"; ?>
+</div>
 
 
 
