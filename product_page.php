@@ -144,7 +144,7 @@ $police = $polices[$rand];
                     <div class="featured-item box-img">
                         <?php echo '<img src="' . $superHero['image']['url'] . '">';?>
                         <h1 class="legend-img" style="font-family: <?php echo $police; ?>"><?php echo $superHero['name']?></h1>
-                        <a href="#" class="site-btn" style="left: 30%">AJOUTER AU PANIER</a>
+                        <a href="add_to_cart.php?id=<?= $superHero['id'] ?>" class="site-btn" style="left: 30%">AJOUTER AU PANIER</a>
                     </div>
                 </div>
 

@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>Gotham-corp</title>
+    <title>Les Supers - Gotham Reconstruction Corporation</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -20,7 +20,7 @@
     <!-- Responsive-->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- fevicon -->
-    <link rel="icon" href="images/fevicon.png" type="image/gif"/>
+    <link rel="icon" href="images/favicon.png" type="image/gif"/>
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
     <!-- Tweaks for older IEs-->
@@ -42,65 +42,65 @@
 
 <body>
 
-<div class="banner_bg_main">
-        <!-- header top section start -->
-        <?php include "_header.php"; ?>
-        <!-- header top section start -->
-        <!-- logo section start -->
-        <div class="logo_section" style="padding-top: 50px;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="logo"><a href="index.php"><img src="images/logo.png"></a></div>
-                    </div>
+<div class="banner_bg_main" style="height: 40vh;">
+    <!-- header top section start -->
+    <?php include "_header.php"; ?>
+    <!-- header top section start -->
+    <!-- logo section start -->
+    <div class="logo_section" style="padding-top: 50px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="logo"><a href="index.php"><img src="images/logo.png"></a></div>
                 </div>
             </div>
         </div>
-        <!-- logo section end -->
-        <!-- header section start -->
-        <div class="header_section">
-            <div class="container">
-                <div class="containt_main">    
-                
-                            
+    </div>
+    <!-- logo section end -->
+    <!-- header section start -->
+    <div class="header_section">
+        <div class="container">
+            <div class="containt_main">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="index.php">Les Supers</a>
+                    <a href="#">À Propos</a>
+                    <a href="#">Contact</a>
                 </div>
-            </div>
-        </div>
-        <!-- header section end -->
-
-        <!-- Featured section -->
-        <div class="featured-section spad">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="featured-item">
-                            <img src="images/marvel_logo.jpg" alt="">
-                            <a href="#" class="site-btn">see more</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="featured-item mb-0">
-                            <img src="images/DC_logo.jpg" alt="">
-                            <a href="#" class="site-btn">see more</a>
-                        </div>
+                <span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></span>
+                <div class="main">
+                    <!-- Another variation with a button -->
+                    <?php include "_search-bar.php"; ?>
+                </div>
+                <div class="header_box">
+                    <div class="login_menu">
+                        <ul>
+                            <li><a href="#">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <span class="padding_10">Cart</span></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+        <!-- header section end -->
 
+
+    <br><br><br><br><br><br>
     <!-- Featured section end -->
 
 <div class="row mt-5 mb-5">
 
 <div class="form-event col-4 offset-4">
 
-  <h2> Contact Us ! </h2><br>
+  <h2> Contactez Nous ! </h2><br>
 
 
     <form method="post" action="/form/add">
         <div class="form-group">
-            <label for="">Lastname : </label>
+            <label for="">Nom : </label>
             <input type="text"
                    class="form-control"
                    name="lastname"
@@ -108,7 +108,8 @@
         </div>
 
         <div class="form-group">
-            <label for="">Firstname : </label>
+            <label for="">
+                Prénom : </label>
             <input type="text"
                    class="form-control"
                    name="firstname"
@@ -126,11 +127,11 @@
 
        <div class="form-group">
          <label for="">Message : </label>
-        <textarea />
+           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
        </div>
 
 
-       <input type="submit" class="btn-submit btn" value="Send"/>
+       <input type="submit" class="btn-submit btn" value="Envoyer"/>
     </form>
 </div>
 </div>

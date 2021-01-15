@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['panier'] = [];
 
 function getSuperById($id) {
     $url = "https://www.superheroapi.com/api/2762190224046152/" . $id;
@@ -40,4 +41,8 @@ function getPrice($powerstats) {
     else
         return strval($price);
 
+}
+
+function addToCart($id) {
+    array_push($_SESSION['panier'], $id);
 }
