@@ -1,3 +1,4 @@
+<?php require 'getSuper.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,10 +88,6 @@
                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                     <span class="padding_10">Cart</span></a>
                             </li>
-                            <li><a href="#">
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span class="padding_10">Cart</span></a>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -124,190 +121,26 @@
     <section class="product-section spadTwo">
         <div class="container">
             <div class="row" id="product-filter">
-                <div class="mix col-lg-3 col-md-6 best">
-                    <div class="product-item">
-                        <figure>
-                            <img src="images/products/1.jpg" alt="">
-                            <div class="bache">DC</div>
-                            <div class="pi-meta">
-                                <div class="pi-m-left">
-                                    <img src="images/icons/eye.png" alt="">
-                                    <p>quick view</p>
-                                </div>
-                                <div class="pi-m-right">
-                                    <img src="images/icons/heart.png" alt="">
-                                    <p>save</p>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="product-info">
-                            <h6>Long red Shirt</h6>
-                            <p>$39.90</p>
-                            <a href="#" class="site-btn btn-line">ADD TO CART</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mix col-lg-3 col-md-6 new">
-                    <div class="product-item">
-                        <figure>
-                            <img src="images/products/2.jpg" alt="">
-                            <div class="bache sale">MARVEL</div>
-                            <div class="pi-meta">
-                                <div class="pi-m-left">
-                                    <img src="images/icons/eye.png" alt="">
-                                    <p>quick view</p>
-                                </div>
-                                <div class="pi-m-right">
-                                    <img src="images/icons/heart.png" alt="">
-                                    <p>save</p>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="product-info">
-                            <h6>Hype grey shirt</h6>
-                            <p>$19.50</p>
-                            <a href="#" class="site-btn btn-line">ADD TO CART</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mix col-lg-3 col-md-6 best">
-                    <div class="product-item">
-                        <figure>
-                            <img src="images/products/3.jpg" alt="">
-                            <div class="bache">DC</div>
-                            <div class="pi-meta">
-                                <div class="pi-m-left">
-                                    <img src="images/icons/eye.png" alt="">
-                                    <p>quick view</p>
-                                </div>
-                                <div class="pi-m-right">
-                                    <img src="images/icons/heart.png" alt="">
-                                    <p>save</p>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="product-info">
-                            <h6>long sleeve jacket</h6>
-                            <p>$59.90</p>
-                            <a href="#" class="site-btn btn-line">ADD TO CART</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mix col-lg-3 col-md-6 new best">
-                    <div class="product-item">
-                        <figure>
-                            <img src="images/products/4.jpg" alt="">
-                            <div class="bache sale">MARVEL</div>
-                            <div class="pi-meta">
-                                <div class="pi-m-left">
-                                    <img src="images/icons/eye.png" alt="">
-                                    <p>quick view</p>
-                                </div>
-                                <div class="pi-m-right">
-                                    <img src="images/icons/heart.png" alt="">
-                                    <p>save</p>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="product-info">
-                            <h6>Denim men shirt</h6>
-                            <p>$32.20 <span>RRP 64.40</span></p>
-                            <a href="#" class="site-btn btn-line">ADD TO CART</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mix col-lg-3 col-md-6 best">
-                    <div class="product-item">
-                        <figure>
-                            <img src="images/products/5.jpg" alt="">
-                            <div class="bache">DC</div>
-                            <div class="pi-meta">
-                                <div class="pi-m-left">
-                                    <img src="images/icons/eye.png" alt="">
-                                    <p>quick view</p>
-                                </div>
-                                <div class="pi-m-right">
-                                    <img src="images/icons/heart.png" alt="">
-                                    <p>save</p>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="product-info">
-                            <h6>Long red Shirt</h6>
-                            <p>$39.90</p>
-                            <a href="#" class="site-btn btn-line">ADD TO CART</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mix col-lg-3 col-md-6 new">
-                    <div class="product-item">
-                        <figure>
-                            <img src="images/products/6.jpg" alt="">
-                            <div class="bache sale">MARVEL</div>
-                            <div class="pi-meta">
-                                <div class="pi-m-left">
-                                    <img src="images/icons/eye.png" alt="">
-                                    <p>quick view</p>
-                                </div>
-                                <div class="pi-m-right">
-                                    <img src="images/icons/heart.png" alt="">
-                                    <p>save</p>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="product-info">
-                            <h6>Hype grey shirt</h6>
-                            <p>$19.50</p>
-                            <a href="#" class="site-btn btn-line">ADD TO CART</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mix col-lg-3 col-md-6 best">
-                    <div class="product-item">
-                        <figure>
-                            <img src="images/products/7.jpg" alt="">
-                            <div class="bache sale">MARVEL</div>
-                            <div class="pi-meta">
-                                <div class="pi-m-left">
-                                    <img src="images/icons/eye.png" alt="">
-                                    <p>quick view</p>
-                                </div>
-                                <div class="pi-m-right">
-                                    <img src="images/icons/heart.png" alt="">
-                                    <p>save</p>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="product-info">
-                            <h6>long sleeve jacket</h6>
-                            <p>$59.90</p>
-                            <a href="#" class="site-btn btn-line">ADD TO CART</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="mix col-lg-3 col-md-6 best">
-                    <div class="product-item">
-                        <figure>
-                            <img src="images/products/8.jpg" alt="">
-                            <div class="bache">DC</div>
-                            <div class="pi-meta">
-                                <div class="pi-m-left">
-                                    <img src="images/icons/eye.png" alt="">
-                                    <p>quick view</p>
-                                </div>
-                                <div class="pi-m-right">
-                                    <img src="images/icons/heart.png" alt="">
-                                    <p>save</p>
-                                </div>
-                            </div>
-                        </figure>
-                        <div class="product-info">
-                            <h6>Denim men shirt</h6>
-                            <p>$32.20 <span>RRP 64.40</span></p>
-                            <a href="#" class="site-btn btn-line">ADD TO CART</a>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                for ($i = 75; $i <= 82; $i++) {
+                    $superHero = getSuperById($i);
+
+                 echo '<div class="mix col-lg-3 col-md-6 best">';
+                 echo '<div class="product-item">';
+                 echo '<figure>';
+                 echo '<img src="' . $superHero['image']['url'] . '" alt="">';
+                 echo '<div class="bache">' . $superHero['biography']['publisher'] . '</div>';
+                 echo '</figure>';
+
+                 echo '<div class="product-info">';
+                 echo '<h6>' . $superHero['name'] . '</h6>';
+                 echo '<p>$' . getPrice($superHero['powerstats']). '.00</p>';
+                 echo '<a href="#" class="site-btn btn-line">AJOUTER AU PANIER</a>';
+                 echo '</div>';
+                 echo '</div>';
+                 echo '</div>';
+                }
+                ?>
             </div>
         </div>
     </section>
@@ -320,41 +153,27 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="featured-item">
-                        <img src="images/featured/featured-3.jpg" alt="">
-                        <a href="#" class="site-btn">see more</a>
+                        <!-- 16:9 aspect ratio -->
+
+                        <video src="https://i.imgur.com/coxxJKP.mp4" width="454" controls="" style="margin-bottom: -8px;"> No video support in this browser.</video>
+
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <h4 class="bgs-title">from the blog</h4>
+                    <h4 class="bgs-title">Superman</h4>
                     <div class="blog-item">
-                        <div class="bi-thumb">
-                            <img src="images/blog-thumb/1.jpg" alt="">
-                        </div>
-                        <div class="bi-content">
-                            <h5>10 tips to dress like a queen</h5>
-                            <div class="bi-meta">July 02, 2018 | By maria deloreen</div>
-                            <a href="#" class="readmore">Read More</a>
-                        </div>
-                    </div>
-                    <div class="blog-item">
-                        <div class="bi-thumb">
-                            <img src="images/blog-thumb/2.jpg" alt="">
-                        </div>
-                        <div class="bi-content">
-                            <h5>Fashion Outlet products</h5>
-                            <div class="bi-meta">July 02, 2018 | By Jessica Smith</div>
-                            <a href="#" class="readmore">Read More</a>
-                        </div>
-                    </div>
-                    <div class="blog-item">
-                        <div class="bi-thumb">
-                            <img src="images/blog-thumb/3.jpg" alt="">
-                        </div>
-                        <div class="bi-content">
-                            <h5>the little black dress just for you</h5>
-                            <div class="bi-meta">July 02, 2018 | By maria deloreen</div>
-                            <a href="#" class="readmore">Read More</a>
-                        </div>
+                        <p>Superman est un super-héros de bande dessinée américaine appartenant au monde imaginaire de l’Univers DC.
+                            Ce personnage est considéré comme une icône culturelle américaine.</p>
+                        <p>Superman a popularisé l'archétype de super-héros et défini ses conventions, bien qu'il ne soit pas le premier
+                            personnage de super-héros. Les super-héros sont généralement jugés en fonction de leur ressemblance avec la norme établie par Superman.
+                            Il reste le super-héros de bandes dessinées le plus vendu de tous les temps ; et sa franchise est une des plus lucratives même en dehors des bandes dessinées</p>
+                        <p>
+                            Ses parents adoptifs Jonathan et Martha Kent apparaissent pour la première fois dans le premier numéro de Action Comics, créé par Jerry Siegel et Joe Shuster.
+                            C'est Martha Kent qui conçoit le costume de Superman. Ses parents sont présents dans de nombreux comics de Superman. Ils apparaissent également dans de nombreuses adaptations cinématographiques et télévisées.
+                        </p>
+                        <p>Kal-El a une cousine Kara Zor-El, alias Supergirl qui est également envoyée sur Terre.
+                            Alors que Clark Kent est adulte, un autre enfant kryptonien arrive de la même manière, Superman l'adopte et le prénomme Chris Kent.</p>
+                        <p>Kal-El cotoie régulierement les autres membres de la Justice League, en particulier avec Batman qui en dépit de conflits parfois très violents devient l'un de ses meilleurs alliés et amis.</p>
                     </div>
                 </div>
             </div>
