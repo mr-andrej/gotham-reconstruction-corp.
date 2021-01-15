@@ -1,5 +1,6 @@
 <?php
-require "call_api.php"
+require "call_api.php";
+require "getSuper.php";
 ?>
 
 <!doctype html>
@@ -47,7 +48,6 @@ require "call_api.php"
           media="screen">
 </head>
 <body>
-
 <style>
 @font-face {
 	font-family: "PWSignaturetwo";
@@ -89,8 +89,55 @@ $rand = rand(0, 5);
 $police = $polices[$rand];
 ?>
 
+<div class="banner_bg_main">
+    <!-- header top section start -->
+    <?php include "_header.php"; ?>
+    <!-- header top section start -->
+    <!-- logo section start -->
+    <div class="logo_section" style="padding-top: 50px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="logo"><a href="index.php"><img src="images/logo.png"></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- logo section end -->
+    <!-- header section start -->
+    <div class="header_section">
+        <div class="container">
+            <div class="containt_main">    
+              
+                           
+            </div>
+        </div>
+    </div>
+    <!-- header section end -->
+
+    <!-- Featured section -->
+    <div class="featured-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="featured-item">
+                        <img src="images/marvel_logo.jpg" alt="">
+                        <a href="#" class="site-btn">see more</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="featured-item mb-0">
+                        <img src="images/DC_logo.jpg" alt="">
+                        <a href="#" class="site-btn">see more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Featured section end -->
+
     <!-- Blog section -->
-    <section class="blog-section spad">
+    <section class="blog-section spad" style="background:white !important;">
         <div class="container">
             <div class="row">
 
@@ -105,9 +152,10 @@ $police = $polices[$rand];
                 <div class="col-lg-7">
                     <h4 class="bgs-title">Price : <?php echo($indice);?> $ </h4>
 
+
                     <div class="blog-item">
                         <div class="bi-thumb" >
-                            <img src="images/boom/WOW-PNG-Image-File.png" alt="">                            
+                            <img src="images/boom/98-983581_clip-black-and-white-download-cartoon-comics-comic.png" alt="">                            
                         </div>
                         <div class="bi-content">
                             <h5>Biography</h5>
@@ -144,7 +192,7 @@ $police = $polices[$rand];
                 <div class="col-lg-7">                
                     <div class="blog-item">
                         <div class="bi-thumb" >
-                        <img src="images/boom/WOW-PNG-Image-File.png" alt="">    
+                        <img src="images/boom/0-4617_comics-clipart-png-tumblr-comic-clipart.png" alt="">    
                             
                         </div>
                         <div class="bi-content">
@@ -154,7 +202,7 @@ $police = $polices[$rand];
                     </div>
                     <div class="blog-item">
                         <div class="bi-thumb">
-                        <img src="images/boom/98-981587_comic-png-transparent-comic-png.png" alt="">
+                        <img src="images/boom/173-1738575_comic-pop-art-stickers-messages-sticker-0-comics.png" alt="">
                         </div>
                         <div class="bi-content">
                             <h5>Connections</h5>
@@ -167,6 +215,10 @@ $police = $polices[$rand];
         </div>
     </section>
     <!-- Blog section end -->
+    <?php include "_footer.php"; ?>
+</div>
+
+
 
 <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
 <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>

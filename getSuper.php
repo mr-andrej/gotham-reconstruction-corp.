@@ -16,7 +16,7 @@ $superHero = json_decode($superHeroJson, true);
 return $superHero;
 }
 
-function getSuperByName($name) {
+function getSupersByName($name) {
     $url = "https://www.superheroapi.com/api/2762190224046152/search/" . $name;
     $arrContextOptions = array(
         "ssl" => array(
